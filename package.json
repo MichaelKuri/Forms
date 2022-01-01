@@ -1,0 +1,15 @@
+{
+  "name": "servey-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^10.0.0",
+    "mongoose": "^6.1.4"
+  },
+  "description": ""
+}
