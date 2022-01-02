@@ -3,7 +3,7 @@ const
     schema = new mongoose.Schema({
         israeliId: {
             type: Number,
-            require: true,
+            required: true,
             unique: true
         },
         phone: {
@@ -14,14 +14,14 @@ const
         },
         address: {
             type: String,
-            require: true
+            required: true
         },
         mail: {
             type: String
         },
         education: {
             type: String,
-            required: true
+            // required: true
         },
         status: {
             type: String,

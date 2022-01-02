@@ -1,1 +1,0 @@
-let daniel = 10

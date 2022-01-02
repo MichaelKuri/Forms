@@ -5,7 +5,7 @@ const userName = process.env.DB_USERNAME
 const pass = process.env.DB_PASSWORD
 
 
-connectionString = `mongodb+srv://${userName}:${pass}@cluster0.forco.mongodb.net/models?retryWrites=true&w=majority`
+connectionString = `mongodb+srv://${userName}:${pass}@cluster0.forco.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`
 
 
 mongoose.connect(connectionString)
