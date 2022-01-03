@@ -10,12 +10,7 @@ function update(updateUser) {
     return userModel.findByIdAndUpdate(updateUser._id, updateUser)
 }
 function del(id) {
-    if (id) {
-        userModel.findByIdAndDelete(id)
-        return 'done'
-    } else {
-        return 'cannot delete'
-    }
+    return userModel.findByIdAndDelete(id)
 }
 
 module.exports = { create, read, update, delete: del } 

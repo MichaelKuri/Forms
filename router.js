@@ -40,44 +40,92 @@ app.delete('/user/:id', async (req, res) => {
 
 //poll crud
 app.post('/poll', async (req, res) => {
-    res.send(await poll.create(req))
+    try {
+        res.send(await poll.create(req.body))
+    } catch (err) {
+        res.send({ code: 400, message: err.message || err })
+    }
 })
 app.get('/poll', async (req, res) => {
-    res.send(await poll.read(req))
+    try {
+        res.send(await poll.read(req.query))
+    } catch (err) {
+        res.send({ code: 400, message: err.message || err })
+    }
 })
 app.put('/poll', async (req, res) => {
-    res.send(await poll.update(req))
+    try {
+        res.send(await poll.update(req.body))
+    } catch (err) {
+        res.send({ code: 400, message: err.message || err })
+    }
 })
-app.delete('/poll', async (req, res) => {
-    res.send(await poll.del(req))
+app.delete('/poll/:id', async (req, res) => {
+    try {
+        res.send(await poll.delete(req.params.id))
+    } catch (err) {
+        res.send({ code: 400, message: err.message || err })
+    }
 })
 
 //institution crud
 app.post('/institution', async (req, res) => {
-    res.send(await institution.create(req))
+    try {
+        res.send(await institution.create(req.body))
+    } catch (err) {
+        res.send({ code: 400, message: err.message || err })
+    }
 })
 app.get('/institution', async (req, res) => {
-    res.send(await institution.read(req))
+    try {
+        res.send(await institution.read(req.query))
+    } catch (err) {
+        res.send({ code: 400, message: err.message || err })
+    }
 })
 app.put('/institution', async (req, res) => {
-    res.send(await institution.update(req))
+    try {
+        res.send(await institution.update(req.body))
+    } catch (err) {
+        res.send({ code: 400, message: err.message || err })
+    }
 })
-app.delete('/institution', async (req, res) => {
-    res.send(await institution.del(req))
+app.delete('/institution/:id', async (req, res) => {
+    try {
+        res.send(await institution.delete(req.params.id))
+    } catch (err) {
+        res.send({ code: 400, message: err.message || err })
+    }
 })
 
 //pollUser crud
 app.post('/pollUser', async (req, res) => {
-    res.send(await pollUser.create(req))
+    try {
+        res.send(await pollUser.create(req.body))
+    } catch (err) {
+        res.send({ code: 400, message: err.message || err })
+    }
 })
 app.get('/pollUser', async (req, res) => {
-    res.send(await pollUser.read(req))
+    try {
+        res.send(await pollUser.read(req.query))
+    } catch (err) {
+        res.send({ code: 400, message: err.message || err })
+    }
 })
 app.put('/pollUser', async (req, res) => {
-    res.send(await pollUser.update(req))
+    try {
+        res.send(await pollUser.update(req.body))
+    } catch (err) {
+        res.send({ code: 400, message: err.message || err })
+    }
 })
-app.delete('/pollUser', async (req, res) => {
-    res.send(await pollUser.del(req))
+app.delete('/pollUser/:id', async (req, res) => {
+    try {
+        res.send(await pollUser.del(req.params.id))
+    } catch (err) {
+        res.send({ code: 400, message: err.message || err })
+    }
 })
 
 app.listen(3000, () => console.log('running'))
