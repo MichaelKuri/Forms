@@ -13,4 +13,4 @@ function del(id) {
     return userModel.findByIdAndDelete(id)
 }
 
-module.exports = { create, read, update, delete: del } 
+module.exports = { create, read, update, delete: del }  

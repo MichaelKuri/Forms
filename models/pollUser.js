@@ -15,7 +15,7 @@ schema = new mongoose.Schema({
         type: String
     },
     status: [],
-    answers: [question]
+    question: [question]
 })
 
 module.exports = mongoose.model('pollUser', schema)

@@ -122,7 +122,7 @@ app.put('/pollUser', async (req, res) => {
 })
 app.delete('/pollUser/:id', async (req, res) => {
     try {
-        res.send(await pollUser.del(req.params.id))
+        res.send(await pollUser.delete(req.params.id))
     } catch (err) {
         res.send({ code: 400, message: err.message || err })
     }
